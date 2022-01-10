@@ -83,3 +83,45 @@ public class Practice
         }
     }
 
+// the same question with the use of enhanced for loop 
+public class Practice
+{
+    static int intArray[] = {20, 35, -15, 7, 55, 1, -22};
+    public static void main(String[] args) {
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = 0; j < intArray.length - 1; j++) {
+                int temp = 0;
+                if (intArray[j] > intArray[j + 1]) {
+                    temp = intArray[j];
+                    intArray[j] = intArray[j + 1];
+                    intArray[j + 1] = temp;
+                }
+            }
+        }
+        System.out.print("Sorted Array : {");
+        for(int arrayElement : intArray)
+        {
+            System.out.print(arrayElement+" ");
+        }
+        System.out.print("}");
+
+        Practice user = new Practice();
+        user.reverseArray(intArray);
+    }
+    static int revArr[] = new int[intArray.length];
+    public static void reverseArray(int[] intArray)
+    {   int count = 0;
+        for(int i = intArray.length-1 ; i >= 0 ; i--)
+        {
+            revArr[count] = intArray[i];
+            count++;
+        }
+        System.out.print("\nReversed Array : { " );
+        for(int arrayElement : revArr)
+        {
+            System.out.print(arrayElement + " ");
+        }
+        System.out.println("}");
+    }
+
+}
