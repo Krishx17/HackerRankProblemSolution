@@ -1,4 +1,3 @@
-package HackerRankProblemSolutions;
 import java.util.Arrays;
 
 class CountingSort{
